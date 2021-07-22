@@ -1,0 +1,23 @@
+//Digital Clock
+import React, { useState } from 'react';
+const App =()=>
+{
+       const [time,setTime]= useState(new Date().toLocaleTimeString());
+
+       const IncV= ()=>{
+         setTime(new Date().toLocaleTimeString());
+       };
+       setInterval(IncV,1000)
+  return(<>
+       <h1>{time}</h1>
+  </>);
+}
+export default App;
+//index.js
+import React from 'react';
+import ReactDOM from 'react-dom';
+import App from './App';
+ReactDOM.render(
+    <App/>
+    ,document.getElementById('root')
+);

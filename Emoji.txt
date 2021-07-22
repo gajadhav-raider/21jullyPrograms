@@ -1,0 +1,55 @@
+//SlotM
+import React from 'react';
+const SlotM=(pops)=>{
+    let {x,y,z}=pops;
+    if((x===y)&&(y===z))
+    {
+      return(
+        <>
+        <div className="box">    
+         <h1>{x}{y}{z}</h1>
+        <h1>This is Matching</h1>
+        <hr/>
+        </div>
+        </>
+      );
+    }
+    else{
+      
+      return(
+        <>
+        <div className="box">    
+         <h1>{x}{y}{z}</h1>
+        <h1>This is Not Matching</h1>
+        <hr/>
+        </div>
+        </>
+      );
+    }
+  }
+  export default SlotM;
+
+  //App.js
+  import React from 'react';
+import SlotM from './SlotM';
+const App =()=>
+{
+  return(<>
+    <h1>🎰 Slot Machine Game 🎰 </h1>
+    <div>
+    <SlotM x=' 😃' y=' 😃' z=' 😃'  />
+    <SlotM x=' 😃' y=' 😃' z=' 🥑' />
+    <SlotM x=' 😃' y=' 🦇' z=' 🪓' />
+    <SlotM x=' ❤️' y=' ❤️' z=' ❤️' />
+    </div>
+  </>);
+}
+export default App;
+//index.js
+import React from 'react';
+import ReactDOM from 'react-dom';
+import App from './App';
+ReactDOM.render(
+    <App/>
+    ,document.getElementById('root')
+);

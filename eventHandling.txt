@@ -1,0 +1,47 @@
+//App.js Change backgroundColor
+import React, { useState } from 'react';
+const App = ()=>{
+  const [bg,setBg]= useState('blue');
+  const [name,setName]= useState('Click Me');
+  const bgColor=()=>{
+    const newColor=" green";
+    setBg( newColor);
+    const newName="Ouch 😼";
+    setName(newName);
+  }
+  const backcolor= ()=>{
+    
+    const newColor=" black";
+    setBg( newColor);
+    const newName=" Ayyo 😠";
+    setName(newName);
+  }
+  return(<>
+  <div style={{backgroundColor:bg}}>
+  {/* <button onClick={bgColor} onDoubleClick={backcolor}>{name}</button> */}
+  <button onMouseOver={bgColor} onMouseLeave={backcolor}>{name}</button>
+  
+  </div>
+  </>);
+}
+export default App;
+//index.css file
+div{
+  width: 100%;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background: orange;
+  display: flex;
+  flex-direction: column;
+}
+button{
+  padding: 12px 20px;
+  background: plum;
+  color: white;
+  border: 2px solid white;
+  border-radius: 5px;
+  outline: none;
+  text-transform: uppercase;
+  cursor: pointer;
+}

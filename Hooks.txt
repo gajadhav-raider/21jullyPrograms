@@ -1,0 +1,24 @@
+//App.js
+import React, { useState } from 'react';
+const App =()=>
+{
+       const [count,SetCout]= useState(0);
+
+       const IncV= ()=>{
+         SetCout(count+10);
+       }
+  return(<>
+       <h1>{count}</h1>
+       <h1> <span onClick={IncV} onMouseOver=" pointer">Click me  </span></h1>
+  </>);
+}
+export default App;
+
+//index.js
+import React from 'react';
+import ReactDOM from 'react-dom';
+import App from './App';
+ReactDOM.render(
+    <App/>
+    ,document.getElementById('root')
+);
